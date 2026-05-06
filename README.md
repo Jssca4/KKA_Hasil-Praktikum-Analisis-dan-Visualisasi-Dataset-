@@ -1,65 +1,85 @@
-KKAPRAKDATA
 📊 Laporan Praktikum Analisis Performa Penjualan
 1. Business Question
-Beberapa pertanyaan yang ingin dijawab dalam analisis ini adalah:
 
-Produk apa yang termasuk underperformer (harga tinggi tetapi penjualan rendah)?
+Pada praktikum ini dilakukan analisis data penjualan untuk menjawab beberapa pertanyaan berikut:
+
+Produk apa yang memiliki harga tinggi tetapi penjualannya rendah?
 Siapa pelanggan terbaik berdasarkan RFM Analysis?
-Kategori produk mana yang paling efisien dalam penggunaan anggaran iklan?
+Kategori produk mana yang paling efektif dalam penggunaan anggaran iklan?
 Apakah anggaran iklan berpengaruh terhadap penjualan?
 2. Data Wrangling
-Proses pembersihan dan persiapan data yang dilakukan:
 
-Menghapus data dengan nilai Price_Per_Unit ≤ 0
+Sebelum data dianalisis, dilakukan beberapa tahap pembersihan dan persiapan data, yaitu:
+
+Menghapus data yang memiliki nilai Price_Per_Unit ≤ 0
 Mengubah kolom Order_Date menjadi format datetime
-Mengelompokkan data berdasarkan:
-Product_Category
-CustomerID
-Menghitung:
-Rata-rata harga produk
-Total quantity penjualan
-Total penjualan (Total_Sales)
-Total anggaran iklan (Ad_Budget)
+Mengecek dan menghapus data duplikat
+Mengelompokkan data berdasarkan kategori produk dan pelanggan
+Menghitung total penjualan, total quantity, serta total anggaran iklan
+Membuat data untuk analisis RFM:
+Recency
+Frequency
+Monetary
+
+Tahap ini dilakukan agar data lebih rapi dan mudah dianalisis.
+
 3. Insights
-📊 Underperformer Product
-Produk dengan harga tinggi tetapi memiliki jumlah penjualan rendah.
+Underperformer Product
 
-Underperformer
-
-Insight:
-
-Terdapat beberapa kategori produk dengan harga di atas rata-rata tetapi quantity rendah
-Hal ini menunjukkan bahwa harga tinggi dapat menjadi faktor penghambat penjualan
-📦 Efisiensi Kategori
-Perbandingan antara total penjualan dan anggaran iklan.
-
-Efisiensi
+Dari visualisasi bar chart terlihat bahwa beberapa produk memiliki harga cukup tinggi, tetapi jumlah penjualannya rendah.
 
 Insight:
 
-Tidak semua kategori dengan anggaran iklan besar menghasilkan penjualan tinggi
-Beberapa kategori memiliki efisiensi rendah
-Ada kategori yang lebih efektif dalam menghasilkan penjualan
-👥 RFM Analysis
+Harga yang terlalu tinggi dapat memengaruhi minat pembeli.
+Beberapa produk perlu dievaluasi kembali, baik dari sisi harga maupun strategi promosinya.
+Efisiensi Kategori Produk
+
+Berdasarkan heatmap yang dibuat, terlihat bahwa tidak semua kategori dengan anggaran iklan besar menghasilkan penjualan tinggi.
+
 Insight:
 
-Pelanggan dengan nilai RFM tinggi merupakan pelanggan loyal
-Mereka sering melakukan transaksi dan memberikan kontribusi besar terhadap pendapatan
-📢 Uji Hipotesis
+Ada kategori yang menghabiskan banyak biaya iklan tetapi hasil penjualannya kurang maksimal.
+Beberapa kategori justru lebih efektif walaupun menggunakan anggaran yang lebih kecil.
+RFM Analysis
+
+Analisis RFM digunakan untuk mengetahui pelanggan yang paling aktif dan memberikan kontribusi terbesar.
+
 Insight:
 
-Rata-rata penjualan pada kelompok iklan tinggi lebih besar dibandingkan dengan iklan rendah
-Hal ini menunjukkan bahwa iklan berpengaruh terhadap penjualan
+Pelanggan dengan nilai RFM tinggi termasuk pelanggan loyal.
+Pelanggan tersebut sering melakukan transaksi dan memiliki kontribusi besar terhadap pendapatan perusahaan.
+Pengaruh Iklan terhadap Penjualan
+
+Hasil analisis menunjukkan bahwa kelompok dengan anggaran iklan lebih tinggi memiliki rata-rata penjualan yang lebih besar.
+
+Insight:
+
+Iklan memiliki pengaruh terhadap peningkatan penjualan.
+Strategi pemasaran yang tepat dapat membantu meningkatkan keuntungan perusahaan.
 4. Recommendation
-Berdasarkan hasil analisis, berikut rekomendasi:
 
-Menurunkan harga atau memberikan promo pada produk underperformer
-Fokus pada pelanggan loyal dengan program khusus
-Mengurangi anggaran iklan pada kategori yang tidak efisien
-Meningkatkan anggaran iklan pada kategori yang efektif
-Melakukan evaluasi strategi pemasaran secara berkala
+Beberapa rekomendasi yang dapat diberikan berdasarkan hasil analisis:
+
+Memberikan promo atau penyesuaian harga pada produk yang penjualannya rendah.
+Mempertahankan pelanggan loyal dengan program reward atau diskon khusus.
+Mengurangi biaya iklan pada kategori yang kurang efektif.
+Memfokuskan anggaran iklan pada kategori yang menghasilkan penjualan lebih baik.
+Melakukan evaluasi penjualan secara berkala agar strategi pemasaran lebih optimal.
 5. Kesimpulan
-Harga produk, strategi iklan, dan perilaku pelanggan sangat mempengaruhi performa penjualan
-Produk mahal tidak selalu menghasilkan penjualan tinggi
-Strategi yang tepat dapat meningkatkan efisiensi dan keuntungan perusahaan
-🚀 Cara Menjalankan
+
+Dari hasil analisis dapat disimpulkan bahwa harga produk, strategi iklan, dan perilaku pelanggan sangat memengaruhi performa penjualan.
+
+Produk dengan harga tinggi tidak selalu menghasilkan penjualan tinggi. Selain itu, penggunaan anggaran iklan yang tepat juga dapat membantu meningkatkan penjualan dan keuntungan perusahaan.
+
+Analisis data seperti ini dapat membantu perusahaan dalam mengambil keputusan bisnis yang lebih efektif.
+
+Cara Menjalankan Program
+Clone Repository
+git clone <link-repository>
+Masuk ke Folder Project
+cd nama-folder
+Install Library
+pip install pandas matplotlib seaborn numpy
+Jalankan Program
+python nama_file.py
+
